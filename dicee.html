@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="h1">Refresh Me</h1>
+      <button id="btn" onclick="battle()"><--Battle--></button>
+      <br>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="" />
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="" />
+      </div>
+
+      <h1 id="result"></h1>
+
+      
+    
+    </div>
+
+
+    <footer>www 🎲 App Brewery 🎲 com</footer>
+
+    <script>
+      function battle(){
+        console.log("work")
+        const img=["/images/dice1.png","/images/dice2.png","/images/dice3.png","/images/dice4.png","/images/dice5.png","/images/dice6.png"];
+        var a = Math.floor(Math.random()*6);
+        var b =Math.floor(Math.random()*6);
+
+        document.querySelector(".img1").setAttribute("src",img[a]);
+        document.querySelector(".img2").setAttribute("src",img[b]);
+        if(a>b){
+          document.querySelector("#result").innerHTML="🎉❤️ Congratulations! [ Player 1 ] One won the match ❤️🎉 "
+        }else{
+          document.querySelector("#result").innerHTML=" 🎉❤️ Congratulations! [ Player 2 ] One won the match ❤️🎉 "
+        }
+
+      }
+      
+    </script>
+
+
+  </body>
+</html>
